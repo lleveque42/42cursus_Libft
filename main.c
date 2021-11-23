@@ -111,6 +111,18 @@ int	main()
 	mem_is_ok(n, l, 8);
 	printf("\n\n");
 
+	printf("/////// TEST BZERO //////\n");
+	ft_bzero(i, 5);
+	bzero(i, 5);
+	ft_bzero(i, 8);
+	bzero(i, 8);
+	ft_bzero(k, 0);
+	bzero(k, 0);
+	ft_bzero(m, 14);
+	bzero(m, 14);
+	mem_is_ok(g, i, 14);
+	mem_is_ok(k, m, 14);
+	printf("\n\n");
 	
 }
 ////////////////////////////////  MAIN STRLEN  ////////////////////////////////
