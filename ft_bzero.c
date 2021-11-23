@@ -6,16 +6,18 @@
 /*   By: lleveque <lleveque@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 09:35:29 by lleveque          #+#    #+#             */
-/*   Updated: 2021/11/23 11:17:34 by lleveque         ###   ########.fr       */
+/*   Updated: 2021/11/23 12:10:11 by lleveque         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 void	ft_bzero(void *s, size_t n)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
-	while (i < (int)n)
+	while (i < n)
 	{
 		((char *)s)[i] = '\0';
 		i++;
