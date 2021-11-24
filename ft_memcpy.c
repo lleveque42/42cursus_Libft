@@ -6,7 +6,7 @@
 /*   By: lleveque <lleveque@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 14:22:10 by lleveque          #+#    #+#             */
-/*   Updated: 2021/11/23 17:18:47 by lleveque         ###   ########.fr       */
+/*   Updated: 2021/11/24 11:48:32 by lleveque         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,4 +24,4 @@ void *ft_memcpy(void *dest, const void *src, size_t n)
 	}
 	((char*)dest)[i] = '\0';
 	return (dest);
-}
+w}
