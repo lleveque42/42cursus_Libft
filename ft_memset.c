@@ -6,7 +6,7 @@
 /*   By: lleveque <lleveque@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 09:07:25 by lleveque          #+#    #+#             */
-/*   Updated: 2021/11/23 13:16:59 by lleveque         ###   ########.fr       */
+/*   Updated: 2021/11/24 14:36:37 by lleveque         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,15 +15,12 @@
 void	*ft_memset(void *s, int c, size_t n)
 {
 	size_t	i;
-	char	*s1;
 
 	i = 0;
-	s1 = (char*)s;
 	while (i < n)
 	{
-		s1[i] = c;
+		((char*)s)[i] = c;
 		i++;
 	}
-	s = s1;
 	return (s);
 }

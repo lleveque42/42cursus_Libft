@@ -1,27 +1,14 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lleveque <lleveque@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/23 14:22:10 by lleveque          #+#    #+#             */
-/*   Updated: 2021/11/24 14:35:53 by lleveque         ###   ########.fr       */
+/*   Created: 2021/11/24 13:52:25 by lleveque          #+#    #+#             */
+/*   Updated: 2021/11/24 14:36:14 by lleveque         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stddef.h>
 
-void *ft_memcpy(void *dest, const void *src, size_t n)
-{
-	size_t	i;
-
-	i = 0;
-	while (i < n)
-	{
-		((char*)dest)[i] = ((char*)src)[i];
-		i++;
-	}
-	((char*)dest)[i] = '\0';
-	return (dest);
-}

@@ -6,12 +6,11 @@
 /*   By: lleveque <lleveque@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 09:35:29 by lleveque          #+#    #+#             */
-/*   Updated: 2021/11/24 11:48:23 by lleveque         ###   ########.fr       */
+/*   Updated: 2021/11/24 14:43:39 by lleveque         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 void	ft_bzero(void *s, size_t n)
 {

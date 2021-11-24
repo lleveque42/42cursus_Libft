@@ -119,5 +119,21 @@ int	main()
 	mem_is_ok(g, i, 14);
 	mem_is_ok(k, m, 14);
 	printf("\n\n");
+
+	printf("////// TEST MEMMOVE /////\n");
+	char o[] = "coucou les amis";
+	char oa[] = "coucou les amis";
+	char p[] = "gouglouwehieifwef";
+	char pa[] = "gouglouwehieifwef";
+	char q[] = "bonjour comment ca va";
+	char qa[] = "bonjour comment ca va";
+	ft_memmove(p, o, 6);
+	memmove(pa, oa, 6);
+	mem_is_ok(o, oa, 15);
+	mem_is_ok(p, pa, 15);
+	ft_memmove(q, p, 7);
+	memmove(qa, pa, 7);
+	mem_is_ok(p, pa, 15);
+	mem_is_ok(q, qa, 15);
 }
 ////////////////////////////////  MAIN STRLEN  ////////////////////////////////
