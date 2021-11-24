@@ -6,22 +6,21 @@
 /*   By: lleveque <lleveque@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 14:22:10 by lleveque          #+#    #+#             */
-/*   Updated: 2021/11/24 14:35:53 by lleveque         ###   ########.fr       */
+/*   Updated: 2021/11/24 15:37:22 by lleveque         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void *ft_memcpy(void *dest, const void *src, size_t n)
+void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
 	size_t	i;
 
 	i = 0;
 	while (i < n)
 	{
-		((char*)dest)[i] = ((char*)src)[i];
+		((char *)dest)[i] = ((char *)src)[i];
 		i++;
 	}
-	((char*)dest)[i] = '\0';
 	return (dest);
 }

@@ -34,6 +34,15 @@ int	mem_is_ok(char *s1, char *s2, int n)
 	return (0);
 }
 
+int	len_ok(int i, int j)
+{
+	if (i == j)
+		printf("SUCCESS\n");
+	else
+		printf("FAIL\n");
+	return (0);
+}
+
 ///////////// MAIN ISALPHA, ISASCII, ISDIGIT, ISALNUM, ISPRINT /////////////////
 int	main()
 {
@@ -135,5 +144,18 @@ int	main()
 	memmove(qa, pa, 7);
 	mem_is_ok(p, pa, 15);
 	mem_is_ok(q, qa, 15);
-}
+	printf("\n\n")
+
 ////////////////////////////////  MAIN STRLEN  ////////////////////////////////
+
+	printf("/////// TEST STRLEN //////\n");
+	char r[] = "";
+	char s[] = "coucou";
+	char *t = '\0';
+	len_ok(ft_strlen(r), strlen(r));
+	len_ok(ft_strlen(s), strlen(s));
+	len_ok(ft_strlen(t), strlen(t));
+	printf("\n\n");
+
+//////////////////////////////// MAIN STRLCPY et tout //////////////////////////
+}

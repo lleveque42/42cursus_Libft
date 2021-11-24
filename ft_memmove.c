@@ -6,7 +6,7 @@
 /*   By: lleveque <lleveque@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/24 11:56:59 by lleveque          #+#    #+#             */
-/*   Updated: 2021/11/24 14:44:04 by lleveque         ###   ########.fr       */
+/*   Updated: 2021/11/24 15:29:41 by lleveque         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 		i = n;
 		while (i >= 1)
 		{
-			((char*)dest)[i - 1] = ((char*)src)[i - 1];
+			((char *)dest)[i - 1] = ((char *)src)[i - 1];
 			i--;
 		}
 	}
@@ -30,7 +30,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	{
 		while (i < n)
 		{
-			((char*)dest)[i] = ((char*)src)[i];
+			((char *)dest)[i] = ((char *)src)[i];
 			i++;
 		}
 	}
