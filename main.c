@@ -144,18 +144,25 @@ int	main()
 	memmove(qa, pa, 7);
 	mem_is_ok(p, pa, 15);
 	mem_is_ok(q, qa, 15);
-	printf("\n\n")
+	printf("\n\n");
 
 ////////////////////////////////  MAIN STRLEN  ////////////////////////////////
 
 	printf("/////// TEST STRLEN //////\n");
 	char r[] = "";
 	char s[] = "coucou";
-	char *t = '\0';
+	char t[] = "\0";
 	len_ok(ft_strlen(r), strlen(r));
 	len_ok(ft_strlen(s), strlen(s));
 	len_ok(ft_strlen(t), strlen(t));
 	printf("\n\n");
 
 //////////////////////////////// MAIN STRLCPY et tout //////////////////////////
+
+/////////////////////////////// MAIN STRCHR, STRRCHR /////////////////////////
+
+	printf("////// TEST STRRCHR //////\n");
+	char u[] = "bonjour";
+	char v = 's';
+	printf("s = %s", ft_strrchr(u, v));
 }
