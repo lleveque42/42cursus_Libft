@@ -6,7 +6,7 @@
 /*   By: lleveque <lleveque@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/25 23:00:16 by lleveque          #+#    #+#             */
-/*   Updated: 2021/11/25 23:19:38 by lleveque         ###   ########.fr       */
+/*   Updated: 2021/11/25 23:25:37 by lleveque         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,13 +23,12 @@ int	ft_atoi(const char *nptr)
 	result = 0;
 	while ((nptr[i] >= 7 && nptr[i] <= 13) || nptr[i] == 32)
 		i++;
-	if (nptr[i] == '-')
+	if (nptr[i] == '-' || nptr[i] == '+')
 	{
-		sign = -1;
+		if (nptr[i] == '-')
+			sign = -1;
 		i++;
 	}
-	else if (nptr[i] != '+' && !(nptr[i] >= '0' && nptr[i] <= '9'))
-		return (0);
 	while (nptr[i] >= '0' && nptr[i] <= '9')
 	{
 		result = result * 10 + (nptr[i] - 48);
