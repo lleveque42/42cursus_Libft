@@ -43,10 +43,11 @@ int	len_ok(int i, int j)
 	return (0);
 }
 
-///////////// MAIN ISALPHA, ISASCII, ISDIGIT, ISALNUM, ISPRINT /////////////////
 int	main()
 {
-	printf("////// TEST ISALPHA ///////\n");
+	///////////// MAIN ISALPHA, ISASCII, ISDIGIT, ISALNUM, ISPRINT /////////////////
+
+/*	printf("////// TEST ISALPHA ///////\n");
 	success_or_not(ft_isalpha('a'), isalpha('a'));
 	success_or_not(ft_isalpha('z'), isalpha('z'));
 	success_or_not(ft_isalpha('a' - 1), isalpha('a' - 1));
@@ -161,8 +162,54 @@ int	main()
 
 /////////////////////////////// MAIN STRCHR, STRRCHR /////////////////////////
 
+	printf("////// TEST STRCHR //////\n");
+	char aa[] = "bonjourbonjour";
+	char v = 0;
+	printf("s = %s\n", ft_strchr(aa, v));
+	v = 'r';
+	printf("s = %s\n", ft_strchr(aa, v));
+	v = 'u';
+	printf("s = %s\n", ft_strchr(aa, v));
+	v = 'o';
+	printf("s = %s\n", ft_strchr(aa, v));
+	v = 'j';
+	printf("s = %s\n", ft_strchr(aa, v));
+	v = 'n';
+	printf("s = %s\n", ft_strchr(aa, v));
+	v = 'b';
+	printf("s = %s\n", ft_strchr(aa, v));
+	v = 'd';
+	printf("s = %s\n", ft_strchr(aa, v));
+	printf("\n\n");
+
 	printf("////// TEST STRRCHR //////\n");
 	char u[] = "bonjour";
-	char v = 's';
-	printf("s = %s", ft_strrchr(u, v));
+	printf("s = %s\n", ft_strrchr(u, 'b'));
+	printf("s = %s\n", ft_strrchr(u, 'o'));
+	printf("s = %s\n", ft_strrchr("bonjourno", 'o'));
+	printf("s = %s\n", ft_strrchr(u, 'j'));
+	printf("s = %s\n", ft_strrchr(u, 's'));
+	printf("s = %s\n", ft_strrchr(u, '\0'));
+	printf("s = %s\n", ft_strrchr("", 'b'));
+	printf("s = %s\n", ft_strrchr("bonjour" + 2, 's'));
+
+//////////////////////// TEST STRNCMP /////////////////////
+*/
+	printf("////// TEST STRNCMP //////\n");
+	char a[] = "coucou";
+	char b[] = "";
+	char c[] = "coucow";
+	printf("ft = %d || og = %d\n", ft_strncmp(a, b, 8), strncmp(a, b, 8));
+	printf("ft = %d || og = %d\n", ft_strncmp(a, c, 8), strncmp(a, c, 8));
+	printf("ft = %d || og = %d\n", ft_strncmp(c, b, 8), strncmp(c, b, 8));
+	printf("ft = %d || og = %d\n", ft_strncmp(c, a, 8), strncmp(c, a, 8));
+	printf("ft = %d || og = %d\n", ft_strncmp(b, a, 8), strncmp(b, a, 8));
+	printf("\n\n");
+
+///////////////////////// TEST ATOI /////////////////////
+
+	printf("////// TEST ATOI ///////\n");
+	printf("ft = %d || og = %d\n", ft_atoi("             56"), atoi("             56"));
+	printf("ft = %d || og = %d\n", ft_atoi("\n-84899595"), atoi("\n-84899595"));
+	printf("ft = %d || og = %d\n", ft_atoi("iefj"), atoi("iefj"));
 }

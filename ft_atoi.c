@@ -1,30 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lleveque <lleveque@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/25 19:33:17 by lleveque          #+#    #+#             */
-/*   Updated: 2021/11/25 21:42:10 by lleveque         ###   ########.fr       */
+/*   Created: 2021/11/25 23:00:16 by lleveque          #+#    #+#             */
+/*   Updated: 2021/11/25 23:19:38 by lleveque         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrchr(const char *s, int c)
+int	ft_atoi(const char *nptr)
 {
-	while (s && *s)
-		s++;
-	if (c == 0)
-		return ((char *)s);
-	if (s)
-		s--;
-	while (s && *s)
+	int	i;
+	int	sign;
+	int	result;
+
+	i = 0;
+	sign = 1;
+	result = 0;
+	while ((nptr[i] >= 7 && nptr[i] <= 13) || nptr[i] == 32)
+		i++;
+	if (nptr[i] == '-')
 	{
-		if (*s == c)
-			return ((char *)s);
-		s--;
+		sign = -1;
+		i++;
 	}
-	return (0);
+	else if (nptr[i] != '+' && !(nptr[i] >= '0' && nptr[i] <= '9'))
+		return (0);
+	while (nptr[i] >= '0' && nptr[i] <= '9')
+	{
+		result = result * 10 + (nptr[i] - 48);
+		i++;
+	}
+	return (sign * result);
 }
