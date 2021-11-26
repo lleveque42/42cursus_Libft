@@ -207,9 +207,10 @@ int	main()
 	printf("\n\n");
 
 ///////////////////////// TEST ATOI /////////////////////
-
+/*
 	printf("////// TEST ATOI ///////\n");
 	printf("ft = %d || og = %d\n", ft_atoi("             56"), atoi("             56"));
 	printf("ft = %d || og = %d\n", ft_atoi("\n-84899595"), atoi("\n-84899595"));
 	printf("ft = %d || og = %d\n", ft_atoi("iefj"), atoi("iefj"));
+*/
 }
