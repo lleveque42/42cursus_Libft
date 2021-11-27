@@ -194,7 +194,7 @@ int	main()
 	printf("s = %s\n", ft_strrchr("bonjour" + 2, 's'));
 
 //////////////////////// TEST STRNCMP /////////////////////
-*/
+
 	printf("////// TEST STRNCMP //////\n");
 	char a[] = "coucou";
 	char b[] = "";
@@ -207,10 +207,18 @@ int	main()
 	printf("\n\n");
 
 ///////////////////////// TEST ATOI /////////////////////
-/*
+
 	printf("////// TEST ATOI ///////\n");
 	printf("ft = %d || og = %d\n", ft_atoi("             56"), atoi("             56"));
 	printf("ft = %d || og = %d\n", ft_atoi("\n-84899595"), atoi("\n-84899595"));
 	printf("ft = %d || og = %d\n", ft_atoi("iefj"), atoi("iefj"));
 */
+///////////////////// TEST STRTRIM ////////////////////////
+
+	printf("////// TEST STRTRIM //////\n");
+	printf("new : %s\n\n", ft_strtrim("lorem \n ipsum \t dolor \n sit \t amet", " "));
+	printf("new : %s\n\n", ft_strtrim("lorem ipsum dolor sit amet", "te"));
+	printf("new : %s\n\n", ft_strtrim("lorem ipsum dolor sit amet", "l "));
+	printf("new : %s\n\n", ft_strtrim("lorem ipsum dolor sit amet", "tel"));
+	printf("new : %s\n\n", ft_strtrim("             ", " "));
 }
