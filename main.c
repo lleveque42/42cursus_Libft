@@ -221,7 +221,7 @@ int	main()
 	printf("new : %s\n\n", ft_strtrim("lorem ipsum dolor sit amet", "l "));
 	printf("new : %s\n\n", ft_strtrim("lorem ipsum dolor sit amet", "tel"));
 	printf("new : %s\n\n", ft_strtrim("             ", " "));
-*/
+
 
 /////////////////// TEST ITOA ////////////////////////////
 
@@ -230,4 +230,18 @@ int	main()
 	printf("new : %d donne %s\n", 0, ft_itoa(0));
 	printf("new : %d donne %s\n", 1024, ft_itoa(1024));
 	printf("new : %d donne %s\n", 97986546, ft_itoa(97986546));
+*/
+
+/////////////////// TEST SPLIT ////////////////////////////
+
+	printf("////// TEST SPLIT //////\n");
+	char **tab1 = ft_split("\0aa\0bbb", '\0');
+
+	int	count = 0;
+
+	while (tab1[count])
+	{
+		printf("tab[%d] = %s\n", count, tab1[count]);
+		count++;
+	}
 }

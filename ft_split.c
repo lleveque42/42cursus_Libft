@@ -6,11 +6,25 @@
 /*   By: lleveque <lleveque@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/28 23:30:03 by lleveque          #+#    #+#             */
-/*   Updated: 2021/11/29 01:10:03 by lleveque         ###   ########.fr       */
+/*   Updated: 2021/11/29 22:32:49 by lleveque         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+static void	ft_free(char **tab)
+{
+	size_t	i;
+
+	i = 0;
+	while (tab[i])
+	{
+		free(tab[i]);
+		i++;
+	}
+	free(tab);
+	return ;
+}
 
 static size_t	word_count(char const *s, char c)
 {
@@ -21,8 +35,8 @@ static size_t	word_count(char const *s, char c)
 	count = 0;
 	if (!s)
 		return (0);
-	if (!c)
-		return (1);
+	// if (!c)
+		// return (1);
 	while (s[i] == c)
 		i++;
 	while (s[i])
@@ -33,6 +47,7 @@ static size_t	word_count(char const *s, char c)
 		while (s[i] && s[i] == c)
 			i++;
 	}
+	// printf("count = %ld\n", count);
 	return (count);
 }
 
@@ -43,8 +58,8 @@ static size_t	word_len(char const *s, char c, size_t	i)
 	len = 0;
 	if (!s)
 		return (0);
-	if (!c)
-		return (ft_strlen(s));
+	// if (!c)
+		// return (ft_strlen(s));
 	while (s[i] && s[i] == c)
 		i++;
 	while (s[i] && s[i] != c)
@@ -60,11 +75,6 @@ static size_t	ft_strcpy_split(char const *s, char *tab, size_t i, char c)
 	size_t	j;
 
 	j = 0;
-	if (!c)
-	{
-		free(tab);
-		tab = ft_strdup(s);
-	}
 	while (s && s[i] && s[i] == c)
 		i++;
 	while (s && s[i] && s[i] != c)
@@ -88,9 +98,16 @@ char	**ft_split(char const *s, char c)
 	j = 0;
 	w = word_count(s, c);
 	tab = malloc(sizeof(char *) * (w + 1));
+	if (!tab)
+		return (NULL);
 	while (j < w)
 	{
 		tab[j] = malloc(sizeof(char) * (word_len(s, c, i) + 1));
+		if (!tab[j])
+		{
+			ft_free(tab);
+			return (NULL);
+		}
 		i = ft_strcpy_split(s, tab[j], i, c);
 		j++;
 	}
