@@ -6,7 +6,7 @@
 /*   By: lleveque <lleveque@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/27 23:15:08 by lleveque          #+#    #+#             */
-/*   Updated: 2021/11/28 00:45:27 by lleveque         ###   ########.fr       */
+/*   Updated: 2021/11/29 10:03:39 by lleveque         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,14 +38,14 @@ char	*ft_strtrim(char const *s1, char const *set)
 	i = 0;
 	while (s1 && s1[start] && is_in_set(s1[start], set))
 		start++;
-	printf("start = %ld\n", start);
-	printf("c end = %c\n", s1[end - 1]);
+	// printf("start = %ld\n", start);
+	// printf("c end = %c\n", s1[end - 1]);
 	while (s1 && is_in_set(s1[end - 1], set))
 		end--;
-	printf("c vrai end = %c\n", s1[end - 1]);
-	printf("end = %ld\n", end);
+	// printf("c vrai end = %c\n", s1[end - 1]);
+	// printf("end = %ld\n", end);
 	dest = malloc(sizeof(char) * (end - start + 1));
-	printf("size = %ld\n", end - start + 1);
+	// printf("size = %ld\n", end - start + 1);
 	if (!dest)
 		return (NULL);
 	while (s1 && s1[i] && (start + i) < end)
@@ -54,6 +54,6 @@ char	*ft_strtrim(char const *s1, char const *set)
 		i++;
 	}
 	dest[start + i] = '\0';
-	printf("len final = %ld\n", ft_strlen(dest));
+	// printf("len final = %ld\n", ft_strlen(dest));
 	return (dest);
 }

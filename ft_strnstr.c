@@ -6,7 +6,7 @@
 /*   By: lleveque <lleveque@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/26 15:02:30 by lleveque          #+#    #+#             */
-/*   Updated: 2021/11/26 15:47:16 by lleveque         ###   ########.fr       */
+/*   Updated: 2021/11/29 10:32:11 by lleveque         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,9 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	size_t	j;
 
 	i = 0;
-	if (!little)
+	if (len == 0)
 		return ((char *)big);
-	while (big && big[i] && i < len)
+	while (big[i] && i < len)
 	{
 		j = 0;
 		while (little[j] && little[j] == big[i + j] && (i + j) < len)
