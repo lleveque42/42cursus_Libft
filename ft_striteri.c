@@ -6,7 +6,7 @@
 /*   By: lleveque <lleveque@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/29 22:49:41 by lleveque          #+#    #+#             */
-/*   Updated: 2021/11/29 23:02:12 by lleveque         ###   ########.fr       */
+/*   Updated: 2021/11/29 23:54:22 by lleveque         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 		return ;
 	while (s[i])
 	{
-		(*f)(i, s);
+		(*f)(i, &s[i]);
 		i++;
 	}
 }
