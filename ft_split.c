@@ -6,7 +6,7 @@
 /*   By: lleveque <lleveque@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/28 23:30:03 by lleveque          #+#    #+#             */
-/*   Updated: 2021/11/29 22:32:49 by lleveque         ###   ########.fr       */
+/*   Updated: 2021/11/30 10:19:31 by lleveque         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ static size_t	word_count(char const *s, char c)
 		return (0);
 	// if (!c)
 		// return (1);
-	while (s[i] == c)
+	while (s[i] && s[i] == c)
 		i++;
 	while (s[i])
 	{

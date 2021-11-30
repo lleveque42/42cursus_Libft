@@ -230,7 +230,7 @@ int	main()
 	printf("new : %d donne %s\n", 0, ft_itoa(0));
 	printf("new : %d donne %s\n", 1024, ft_itoa(1024));
 	printf("new : %d donne %s\n", 97986546, ft_itoa(97986546));
-*/
+
 
 /////////////////// TEST SPLIT ////////////////////////////
 
@@ -244,4 +244,15 @@ int	main()
 		printf("tab[%d] = %s\n", count, tab1[count]);
 		count++;
 	}
+*/
+
+////////////////// TEST SUBSTR ///////////////////////////
+
+	printf("////// TEST SUBSTR //////\n");
+	char	*s1 = ft_substr("tripouille", 0, 42000);
+	printf("result = %s\n", s1);
+	free(s1);
+	char	*s2 = ft_substr("tripouille", 100, 1);
+	printf("result = %s\n", s2);
+	free(s2);
 }

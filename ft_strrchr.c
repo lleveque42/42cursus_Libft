@@ -6,7 +6,7 @@
 /*   By: lleveque <lleveque@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/25 19:33:17 by lleveque          #+#    #+#             */
-/*   Updated: 2021/11/29 10:18:47 by lleveque         ###   ########.fr       */
+/*   Updated: 2021/11/30 11:45:26 by lleveque         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,11 @@ char	*ft_strrchr(const char *s, int c)
 	count_c = 0;
 	while (*s)
 	{
-		if (*s == c)
+		if (*s == (unsigned char)c)
 			count_c++;
 		s++;
 	}
-	if (c == 0)
+	if (!c)
 		return ((char *)s);
 	if (count_c == 0)
 		return (0);
@@ -31,7 +31,7 @@ char	*ft_strrchr(const char *s, int c)
 		s--;
 	while (*s)
 	{
-		if (*s == c)
+		if (*s == (unsigned char)c)
 			return ((char *)s);
 		s--;
 	}

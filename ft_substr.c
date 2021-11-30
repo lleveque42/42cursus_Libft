@@ -6,33 +6,50 @@
 /*   By: lleveque <lleveque@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/27 22:37:18 by lleveque          #+#    #+#             */
-/*   Updated: 2021/11/29 14:18:10 by lleveque         ###   ########.fr       */
+/*   Updated: 2021/11/30 14:53:53 by lleveque         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
+
+static size_t	malloc_size(char const *s, unsigned int start, size_t len)
+{
+	size_t	i;
+
+	i = 0;
+	if (start > ft_strlen(s))
+		return (i);
+	while (s[start] && i < len)
+	{
+		start++;
+		i++;
+	}
+	return (i);
+}
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	size_t	i;
-	size_t	j;
+	size_t	size;
 	char	*dest;
 
-	i = 0;
-	j = 0;
 	if (!s)
 		return (NULL);
-	dest = malloc(sizeof(char) * (len + 1));
+	size = malloc_size(s, start, len);
+	dest = malloc(sizeof(char) * (size + 1));
 	if (!dest)
 		return (NULL);
-	while (s && s[i] && i < start)
-		i++;
-	while (s && s[i] && j < len)
+	i = 0;
+	if (!(start > ft_strlen(s)))
 	{
-		dest[j] = s[i];
-		i++;
-		j++;
+		while (s[start] && i < size)
+		{
+			dest[i] = s[start];
+			i++;
+			start++;
+		}
 	}
-	dest[j] = '\0';
+	dest[i] = '\0';
 	return (dest);
 }

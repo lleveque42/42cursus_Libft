@@ -6,7 +6,7 @@
 /*   By: lleveque <lleveque@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/25 18:35:06 by lleveque          #+#    #+#             */
-/*   Updated: 2021/11/29 10:10:01 by lleveque         ###   ########.fr       */
+/*   Updated: 2021/11/30 11:44:44 by lleveque         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,11 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	if (!c)
-	{
-		while (*s)
-			s++;
-		return ((char *)s);
-	}
+	if (!(unsigned char)c)
+		return ((char *)s + ft_strlen(s));
 	while (*s)
 	{
-		if (*s == c)
+		if (*s == (unsigned char)c)
 			return ((char *)s);
 		s++;
 	}
