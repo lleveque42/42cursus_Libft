@@ -6,7 +6,7 @@
 /*   By: lleveque <lleveque@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/28 23:30:03 by lleveque          #+#    #+#             */
-/*   Updated: 2021/11/30 10:19:31 by lleveque         ###   ########.fr       */
+/*   Updated: 2021/11/30 22:24:20 by lleveque         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,8 +35,6 @@ static size_t	word_count(char const *s, char c)
 	count = 0;
 	if (!s)
 		return (0);
-	// if (!c)
-		// return (1);
 	while (s[i] && s[i] == c)
 		i++;
 	while (s[i])
@@ -47,7 +45,6 @@ static size_t	word_count(char const *s, char c)
 		while (s[i] && s[i] == c)
 			i++;
 	}
-	// printf("count = %ld\n", count);
 	return (count);
 }
 
@@ -58,8 +55,6 @@ static size_t	word_len(char const *s, char c, size_t	i)
 	len = 0;
 	if (!s)
 		return (0);
-	// if (!c)
-		// return (ft_strlen(s));
 	while (s[i] && s[i] == c)
 		i++;
 	while (s[i] && s[i] != c)
