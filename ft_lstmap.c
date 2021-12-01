@@ -1,28 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstsize.c                                       :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lleveque <lleveque@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/30 22:37:13 by lleveque          #+#    #+#             */
-/*   Updated: 2021/12/01 10:47:35 by lleveque         ###   ########.fr       */
+/*   Created: 2021/12/01 17:09:37 by lleveque          #+#    #+#             */
+/*   Updated: 2021/12/01 18:15:32 by lleveque         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_lstsize(t_list *lst)
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	size_t	i;
-	t_list	*tmp;
+	t_list	*new;
+	t_list	*f_lst;
 
-	i = 0;
-	tmp = lst;
-	while (tmp)
+	if (!f || !lst)
+		return (NULL);
+	f_lst = NULL;
+	while (lst)
 	{
-		tmp = tmp -> next;
-		i++;
+		new = ft_lstnew(lst -> content);
+		if (!new)
+		{
+			ft_lstclear(&f_lst, del);
+			return (NULL);
+		}
+		new -> content = f(new -> content);
+		ft_lstadd_back(&f_lst, new);
+		lst = lst -> next;
 	}
-	return (i);
+	return (f_lst);
 }
