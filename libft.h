@@ -6,7 +6,11 @@
 /*   By: lleveque <lleveque@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 10:50:40 by lleveque          #+#    #+#             */
+<<<<<<< HEAD
 /*   Updated: 2021/11/30 15:32:09 by lleveque         ###   ########.fr       */
+=======
+/*   Updated: 2021/11/30 22:37:49 by lleveque         ###   ########.fr       */
+>>>>>>> 35fa0b6902969412a537ab3d7696aab332f9d59d
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +21,19 @@
 # include <stdlib.h>
 # include <stddef.h>
 
+<<<<<<< HEAD
 typedef struct	s_list
 {
 	void	*content;
 	struct s_list	*next;
 } t_list;
+=======
+typedef struct s_list
+{
+	void			*content;
+	struct s_list	*next;
+}	t_list;
+>>>>>>> 35fa0b6902969412a537ab3d7696aab332f9d59d
 
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
@@ -60,5 +72,9 @@ void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
 t_list	*ft_lstnew(void *content);
 void	ft_lstadd_front(t_list **alst, t_list *new);
+<<<<<<< HEAD
+=======
+int		ft_lstsize(t_list *lst);
+>>>>>>> 35fa0b6902969412a537ab3d7696aab332f9d59d
 
 #endif

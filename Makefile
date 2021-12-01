@@ -6,7 +6,11 @@ ft_strdup.c ft_substr.c ft_strjoin.c ft_strtrim.c ft_split.c ft_itoa.c \
 ft_strmapi.c ft_striteri.c ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c \
 ft_putnbr_fd.c
 
+<<<<<<< HEAD
 SRCS_BONUS	= ft_lstnew.c ft_lstadd_front.c
+=======
+SRCS_BONUS	= ft_lstnew.c ft_lstadd_front.c ft_lstsize.c
+>>>>>>> 35fa0b6902969412a537ab3d7696aab332f9d59d
 
 OBJS	= ${SRCS:.c=.o}
 
